@@ -1,7 +1,7 @@
-﻿using WebApplication2.Entities;
-using WebApplication2.UnitOfWork;
+﻿using Entities;
+using UnitOfWork;
 
-namespace WebApplication2.Repository
+namespace Repository
 {
     public interface IMainRepository<TEntity> : IBaseRepository<TEntity>
          where TEntity : BaseEntity

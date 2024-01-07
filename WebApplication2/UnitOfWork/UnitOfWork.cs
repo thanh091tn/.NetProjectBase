@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace WebApplication2.UnitOfWork
+namespace UnitOfWork
 {
     public class UnitOfWork<DBContext> : IUnitOfWork<DBContext>
         where DBContext : DbContext

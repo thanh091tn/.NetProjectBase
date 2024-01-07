@@ -1,9 +1,9 @@
 ﻿using MediatR;
-using WebApplication2.Request;
-using WebApplication2.Response;
-using WebApplication2.Service.Todo;
+using Request;
+using Response;
+using Service.Todo;
 
-namespace WebApplication2.Handlers
+namespace Handlers
 {
     public class TodoHandler : IRequestHandler<TodoRequest, Response<bool>>
     {

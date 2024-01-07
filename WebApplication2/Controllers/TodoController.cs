@@ -1,9 +1,9 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using WebApplication2.Request;
-using WebApplication2.Response;
+using Request;
+using Response;
 
-namespace WebApplication2.Controllers
+namespace Controllers
 {
     public class TodoController : BaseController
     {
@@ -12,7 +12,7 @@ namespace WebApplication2.Controllers
         }
 
         [HttpPost]
-        public async Task<BaseResponse> GetTodoServices([FromBody]TodoRequest request)
+        public async Task<BaseResponse> GetTodoServices([FromBody] TodoRequest request)
         {
             var rs = await _mediator.Send(request);
             return rs;

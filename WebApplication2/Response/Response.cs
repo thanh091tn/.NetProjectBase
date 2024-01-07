@@ -1,4 +1,4 @@
-﻿namespace WebApplication2.Response
+﻿namespace Response
 {
     public class Response<TResponse> : BaseResponse
     {

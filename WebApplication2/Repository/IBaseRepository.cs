@@ -1,7 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
-using WebApplication2.Entities;
+﻿using Entities;
+using Microsoft.EntityFrameworkCore;
 
-namespace WebApplication2.Repository
+namespace Repository
 {
     public interface IBaseRepository<TEntity> where TEntity : BaseEntity
     {

@@ -1,8 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore;
-using WebApplication2.Entities;
-using WebApplication2.UnitOfWork;
+﻿using Entities;
+using Microsoft.EntityFrameworkCore;
+using UnitOfWork;
 
-namespace WebApplication2.Repository
+namespace Repository
 {
     public class MainRepository<TEntity> : IMainRepository<TEntity>
         where TEntity : BaseEntity

@@ -1,4 +1,4 @@
-﻿namespace WebApplication2.Entities
+﻿namespace Entities
 {
     public class TodoItem : BaseEntity
     {

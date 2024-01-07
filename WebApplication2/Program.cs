@@ -3,11 +3,10 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using MediatR;
 using System.Reflection;
-using WebApplication2.Service.Todo;
 using NetCore.AutoRegisterDi;
-using WebApplication2.Entities;
-using WebApplication2.UnitOfWork;
-using WebApplication2.Repository;
+using UnitOfWork;
+using Entities;
+using Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -27,6 +26,7 @@ builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(Assembly.G
 builder.Services.AddScoped(typeof(IUnitOfWork<>),typeof(UnitOfWork<>));
 builder.Services.AddScoped(typeof(IMainRepository<>), typeof(MainRepository<>));
 builder.Services.RegisterAssemblyPublicNonGenericClasses().Where(c => c.Name.EndsWith("Services")).AsPublicImplementedInterfaces(ServiceLifetime.Scoped);
+builder.Services.AddApplicationInsightsTelemetry();
 //builder.Services.AddTransient<ITodoServices,TodoServices>();
 
 

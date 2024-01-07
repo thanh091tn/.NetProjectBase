@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Diagnostics.CodeAnalysis;
 
-namespace WebApplication2.Repository
+namespace Repository
 {
     public class QueryCommandDbSet<TEntity> : IQueryCommand<TEntity>
         where TEntity : class

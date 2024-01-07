@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 
-namespace WebApplication2.Entities
+namespace Entities
 {
     public class TodoContext : DbContext
     {

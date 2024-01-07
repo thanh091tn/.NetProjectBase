@@ -1,7 +1,7 @@
 ﻿using MediatR;
-using WebApplication2.Response;
+using Response;
 
-namespace WebApplication2.Request
+namespace Request
 {
     public class TodoRequest : IRequest<Response<bool>>
     {

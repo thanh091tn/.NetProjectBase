@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace WebApplication2.Controllers
+namespace Controllers
 {
     /// <summary>
     /// BaseV1Controller

@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 
-namespace WebApplication2.Repository
+namespace Repository
 {
     public interface IQueryCommand<TEntity> where TEntity : class
     {

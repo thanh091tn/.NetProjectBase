@@ -1,6 +1,6 @@
-﻿using WebApplication2.Request;
+﻿using Request;
 
-namespace WebApplication2.Service.Todo
+namespace Service.Todo
 {
     public interface ITodoServices
     {
