@@ -1,0 +1,13 @@
+﻿namespace WebApplication2.Response
+{
+    public class BaseResponseException
+    {
+        public string ErrorCode { get; set; }
+
+        public string Message { get; set; }
+
+        public string FullMessage { get; set; }
+
+        public object ErrorData { get; set; }
+    }
+}
