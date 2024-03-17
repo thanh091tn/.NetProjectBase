@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Request;
 using Response;
@@ -12,6 +13,7 @@ namespace Controllers
         }
 
         [HttpPost]
+        [Authorize]
         public async Task<BaseResponse> GetTodoServices([FromBody] TodoRequest request)
         {
             var rs = await _mediator.Send(request);
