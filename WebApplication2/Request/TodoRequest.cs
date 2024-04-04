@@ -1,5 +1,5 @@
 ﻿using MediatR;
-using Response;
+using ProjectBB.Model;
 
 namespace Request
 {

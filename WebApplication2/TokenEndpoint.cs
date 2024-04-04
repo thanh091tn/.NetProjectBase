@@ -34,7 +34,7 @@ namespace ProjectBB
                 jwtOptions,
                 userName,
                 TimeSpan.FromMinutes(60),
-                new[] { "read_todo", "create_todo" });
+                ["read_todo", "create_todo"]);
 
             //returns a json response with the access token
             return Results.Ok(new
@@ -46,7 +46,7 @@ namespace ProjectBB
         }
 
         //
-        static string CreateAccessToken(
+        public static string CreateAccessToken(
             JwtOptions jwtOptions,
             string username,
             TimeSpan expiration,
@@ -80,5 +80,6 @@ namespace ProjectBB
             var rawToken = new JwtSecurityTokenHandler().WriteToken(token);
             return rawToken;
         }
+
     }
 }

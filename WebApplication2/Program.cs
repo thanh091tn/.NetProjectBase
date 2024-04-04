@@ -1,18 +1,16 @@
-﻿using Microsoft.AspNetCore.Hosting;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
-using MediatR;
-using System.Reflection;
-using NetCore.AutoRegisterDi;
-using UnitOfWork;
-using Entities;
-using Repository;
-using ProjectBB;
-using Service.Todo;
+﻿using Entities;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
-using System.Text;
 using Microsoft.OpenApi.Models;
+using NetCore.AutoRegisterDi;
+using ProjectBB;
+using ProjectBB.Service.Login;
+using Repository;
+using Service.Todo;
+using System.Reflection;
+using System.Text;
+using UnitOfWork;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -31,6 +29,7 @@ builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(Assembly.G
 
 builder.Services.AddScoped(typeof(IUnitOfWork<>),typeof(UnitOfWork<>));
 builder.Services.AddScoped(typeof(IMainRepository<>), typeof(MainRepository<>));
+//builder.Services.AddScoped(typeof(IloginServices), typeof(LoginServices));
 builder.Services.RegisterAssemblyPublicNonGenericClasses().Where(c => c.Name.EndsWith("Services")).AsPublicImplementedInterfaces(ServiceLifetime.Scoped);
 builder.Services.AddApplicationInsightsTelemetry();
 var jwtOptions  = builder.Configuration.GetSection("JwtOptions").Get<JwtOptions>();

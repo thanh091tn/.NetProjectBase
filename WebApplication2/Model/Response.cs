@@ -1,4 +1,6 @@
-﻿namespace Response
+﻿using Response;
+
+namespace ProjectBB.Model
 {
     public class Response<TResponse> : BaseResponse
     {
